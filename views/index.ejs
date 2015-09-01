@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/todo.css"/>
+
+  <title>Todo app</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+      <h1>Todo List</h1>
+      <h3>All I need to do today:</h3>
+        <div>
+          <ul>
+          <!-- use EJS to loop over an array of todos -->
+          <!-- This array should come from the server! -->
+          <% arr.forEach(function(el){ %>
+            <% if(el!== "") {%>
+              <li><a href= <%=el.link %> ><%= el.name %></a></li>
+            <%}}) %>   
+          </ul>
+        </div>
+        <a class="btn btn-default button" href="http://localhost:3000/todo/new" role="button">Add Item</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

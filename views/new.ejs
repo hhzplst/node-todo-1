@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/todo.css"/>
+
+  <title>Todo app</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+      <h1>Todo List</h1>
+        <form action="/submit" method="POST">
+          <div class="form-group">
+            <label for="inputText"></label>
+            <input type="text" id="inputText" name="item">
+
+            <label for="add_todo"></label>
+            <input type="submit" id="add_todo">
+          </div>
+        </form>
+        <div>
+          <ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

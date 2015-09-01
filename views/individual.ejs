@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/todo.css"/>
+
+  <title>Todo app</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+      <h1><%= name %></h1>
+        <div class="jumbotron">
+          <p><%=memo%></p>
+        </div>
+          <form action= "/add-memo" method="POST">
+            <div class="form-group">
+              <label for="inputText"></label>
+              <input type="textarea" id="inputText" name="memo" placeholder="change memo here...">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="addMemo"></label>
+              <input type="submit" value= "Change Memo" id="addMemo" class="btn btn-success">
+            </div>
+          </form>
+       <div class="col-md-4">
+        <form action="/delete-item" method="POST">
+          <div class="form-group">
+            <label for="delete"></label>
+            <input type="submit" value="Delete this Item" id="delete" class="btn btn-danger">
+          </div>
+        </form>
+       </div><br>
+       <div class="col-md-4">
+        <a class="btn btn-default center-block" href="http://localhost:3000/todo/" role="button">See all Items</a>
+       </div>   
+      </div>
+    </div>
+  </div>
+</body>
+</html>
